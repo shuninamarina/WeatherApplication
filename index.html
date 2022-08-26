@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Montserrat:wght@100;200;300;400;500&family=Quicksand:wght@100;300;400;500&family=Amethysta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+   <div class="container">
+    <h1 class="heading">WEATHER FORECAST</h1>
+    
+          <div class="weather-app">
+            <form class="search-form" id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <input 
+                    type="search"
+                    placeholder="Type a city.."
+                    autofocus="on"
+                    autocomplete="off"
+                    id="search-city-input"
+                    class="form-control shadow-sm"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="SEARCH"
+                    class="form-control btn btn-primary shadow-sm"
+                    id="search-button"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="button"
+                    value="CURRENT"
+                    class="form-control btn btn-primary shadow-sm"
+                    id="current-button"
+                  />
+                </div>
+            </form>
+
+           <div class="current-city">
+						<h2>
+              <span id="city">Kharkiv</span>
+              <span id="temperature">20</span>
+              <span class="active">
+                  <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" alt="Clear" id="icon"/>
+                <a href="#" id="celsius-link">°C |</a> <a href="#" id="fahrenheit-link">°F</a>
+              </span>   ️
+            </h2>
+              </div>
+
+                <div class="last-update">
+            <ul>
+              <li>Last updated: <span id="date">Tuesday 16:00</span> </li>
+              <li id="description">
+                Partly Cloudy
+              </li>
+            </ul>
+          </div> 
+
+          <div class="weather-items">
+            <ul>
+            <li>Humidity: <span id="humidity">40</span> % </li> <br>
+            <li>Wind: <span id="wind">4</span> km/h</li> <br>
+            <li>Pressure: <span id="pressure">750</span></li>
+            </ul>
+			
+          </div>
+
+          <div>
+            <ul>
+              <li><button class="hourly">Hourly</button></li>
+              <li><button class="weekly">Weekly</button></li>
+              <li><button class="weekend">Weekend</button></li>
+            </ul>
+          </div>
+
+          <div class="card" id="sunday">
+    <h5 class="card-title">Sun</h5>
+    <p class="card-emoji-temp">🌥</p>
+    <p class="card-temp">25°C <br> 19°C</p>
+</div>
+<div class="card" id="monday">
+    <h5 class="card-title">Mon</h5>
+    <p class="card-emoji-temp">⛅️</p>
+    <p class="card-temp">26°C <br> 20°C</p>
+</div>
+<div class="card" id="tuesday">
+    <h5 class="card-title">Tue</h5>
+    <p class="card-emoji-temp">⛅️</p>
+    <p class="card-temp">27°C <br> 19°C</p>
+</div>
+<div class="card" id="wednesday">
+    <h5 class="card-title">Wed</h5>
+    <p class="card-emoji-temp">🌤</p>
+    <p class="card-temp">25°C <br> 19°C</p>
+</div>
+<div class="card" id="thursday">
+    <h5 class="card-title">Thur</h5>
+    <p class="card-emoji-temp">🌧</p>
+    <p class="card-temp">24°C <br> 20°C</p>
+</div>
+<div class="card" id="friday">
+    <h5 class="card-title">Fri</h5>
+    <p class="card-emoji-temp">🌦</p>
+    <p class="card-temp">25°C <br> 16°C</p>
+</div>
+<div class="card" id="saturday">
+    <h5 class="card-title">Sat</h5>
+    <p class="card-emoji-temp">🌦</p>
+    <p class="card-temp">26°C <br> 19°C</p>
+</div>
+</div>
+<footer> <a href="https://github.com/shuninamarina/weather_app" target="_blank">Open-source code</a> by Marina Shunina</footer>
+<script src="src/index.js">
+</script>
+  </body>
+</html>
